@@ -88,3 +88,7 @@ If you want to contribute to this project, you can:
 ## License
 
 This project is licensed under the [Your License] License. Feel free to use and modify this script for personal or educational purposes.
+=======
+# dark-fantasy-book-generator
+This project is a Python script that generates a book with dark fantasy themes. It uses Google's Gemini AI model to generate the book outline and content, and ReportLab to output the generated text into a well-formatted PDF.
+>>>>>>> 87de5e85378cecba48cea5e5852244c08c2e7e35
