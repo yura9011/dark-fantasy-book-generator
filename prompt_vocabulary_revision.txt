@@ -1,0 +1,10 @@
+REWRITE the following {is_transition} improving the vocabulary.
+REPLACE overused or generic words with more vivid and compelling alternatives.
+DO NOT use the following words more than twice: {restricted_words}.
+USE unique and evocative phrases that enhance the dark fantasy atmosphere.
+TRANSFORM mundane sentences into memorable ones by using literary devices like similes, metaphors, and personification.
+Focus on creating a strong sensory experience for the reader.
+
+Original text:
+
+{sections_text}

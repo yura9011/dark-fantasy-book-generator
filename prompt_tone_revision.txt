@@ -1,0 +1,5 @@
+REWRITE the following {is_transition}, maintaining a dark fantasy tone reminiscent of Berserk.  The tone MUST be dark, oppressive, and violent, conveying a sense of dread and despair.  The text MUST reflect the moral ambiguity of the characters, who are not strictly good or evil but operate in shades of gray.  Include elements of betrayal, violence, and social criticism.  Maintain a dystopian atmosphere where power systems are misused, leading to societal inequality and corruption.  The atmosphere MUST be consistent throughout the text.  Use vivid imagery and sensory details to immerse the reader in the world.
+
+Original text:
+
+{sections_text}

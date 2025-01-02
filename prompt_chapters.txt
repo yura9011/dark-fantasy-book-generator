@@ -1,0 +1,34 @@
+GENERATE a JSON dictionary representing the structure of a dark fantasy novel titled '{book_title}'.
+The dictionary MUST contain a list of {num_chapters} chapters.
+Each chapter MUST have an evocative and relatively short 'chapter_title', and a list of {num_subchapters} subchapters.
+Each subchapter MUST have an evocative and relatively short 'subchapter_title'.
+The dictionary MUST have the following structure:
+{{
+  "book_title": "{book_title}",
+  "chapters": [
+    {{
+      "chapter_title": "Chapter Title 1",
+      "subchapters": [
+        {{
+          "subchapter_title": "Subchapter Title 1.1"
+        }},
+        {{
+          "subchapter_title": "Subchapter Title 1.2"
+        }}
+      ]
+    }},
+    {{
+        "chapter_title": "Chapter Title 2",
+         "subchapters": [
+        {{
+          "subchapter_title": "Subchapter Title 2.1"
+        }},
+        {{
+          "subchapter_title": "Subchapter Title 2.2"
+        }}
+      ]
+    }}
+  ]
+}}
+The chapters and subchapters should reflect the dark fantasy themes of the book title: '{keywords_string}'. The titles must also be relatively short, a few words each.
+DO NOT include any introductory or explanatory text. ONLY output the JSON dictionary.

@@ -1,0 +1,21 @@
+Embody a dark fantasy editor, specializing in worlds akin to Berserk, Full Metal Alchemist, Evangelion, and Attack on Titan. Review the following text for the subchapter '{subchapter_title}' from '{book_title}': {sections_text}
+
+Rewrite the text, focusing on:
+
+Tone: Maintain a dark fantasy atmosphere reminiscent of Berserk, with elements of violence, betrayal, and social criticism. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Dystopia: Ensure the text conveys a dystopian atmosphere similar to Full Metal Alchemist, where power systems (e.g., alchemy, technology, magic) are misused, leading to societal inequality and corruption. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Moral Complexity: Evaluate character morality, considering dilemmas such as: the justification of revenge, the corrupting influence of power, and the possibility of redemption after committing terrible acts. Let characters grapple with these questions through their actions and internal struggles. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Combat: If battles occur, evaluate their strategic elements. How do characters leverage abilities, terrain, and enemy weaknesses? Ensure battles are exciting, realistic, and contribute to character development. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Descriptions: Craft unique and evocative descriptions using sensory language that immerses the reader in the world through sight, hearing, smell, touch, and taste. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Character Diversity: Ensure diversity in gender, ethnicity, and social background. Avoid stereotypes; create characters with unique motivations and personalities. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Plot & Coherence: Ensure plot coherence, character consistency, natural dialogue, varied pacing that builds suspense, and a consistent dark fantasy tone. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Replace overused or generic language with vivid, compelling vocabulary. Transform mundane sentences into memorable ones. ( No introductory or explanatory text. Follow the specified structure precisely)
+
+Return only the improved, rewritten text. No introductory or explanatory text. Follow the specified structure precisely ( No introductory or explanatory text. Follow the specified structure precisely)

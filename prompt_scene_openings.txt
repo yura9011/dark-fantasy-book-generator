@@ -1,0 +1,9 @@
+GENERATE a list of 5 unique and evocative ways to open a scene suitable for a dark fantasy novel titled '{book_title}'.
+
+The scene openings must be concise and must include actions and settings.
+
+INCORPORATE the following themes from the book title: '{keywords_string}'.
+
+The scene openings must focus on creating a sense of dread, suspense, and mystery.
+Don't use similar phrases or ideas repeatedly.
+OUTPUT the list of 5 scene openings, separated by newlines. DO NOT include any introductory text or explanations.

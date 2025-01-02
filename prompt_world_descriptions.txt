@@ -1,0 +1,21 @@
+GENERATE a list of 7 unique and evocative world descriptions suitable for a dark fantasy novel titled '{book_title}'.
+
+The world must have elements inspired by dark fantasy anime series from the 90s, you could inspirate from Berzerk, Full Metal ALchemist, Evangelion and Attack on Titan but DO NOT explicitly describe how those elements look, instead SHOW them through action or dialogue. DO NOT include any introductory text or explanations
+
+INCORPORATE the following themes from the book title: '{keywords_string}'.
+
+The descriptions MUST focus on creating a sense of dread, decay, and oppressive atmosphere with A sky perpetually covered by dense dark clouds, Ancient and Unseen Evils, habitants marked by fear and superstition, Presence of sinister cults operating in the shadows, Flora and fauna distorted by dark magic, Forbidden and dangerous magic systems. DO NOT include any introductory text or explanations
+
+Key points to consider:
+
+Show, don't tell: Use vivid sensory descriptions to create an immersive experience for the reader, allowing the oppressive atmosphere to be perceived through the characters' senses. DO NOT include any introductory text or explanations.
+
+Consistency in atmosphere: Maintain a dark and oppressive atmosphere throughout the novel, ensuring that every element of the world contributes to the feeling of terror and despair. DO NOT include any introductory text or explanations. 
+
+Connection to themes: Integrate the themes of the book's title into the descriptions of the world, showing how betrayal, revenge, and despair have shaped the setting and society. DO NOT include any introductory text or explanations.
+
+Originality: Take inspiration from dark anime from the 90s, but don't just copy existing elements. Use your creativity to create a unique and memorable world that reflects your own vision. DO NOT include any introductory text or explanations.
+
+Don't use similar phrases or ideas repeatedly.
+
+OUTPUT the list of 7 descriptions, separated by newlines. DO NOT include any introductory text or explanations.

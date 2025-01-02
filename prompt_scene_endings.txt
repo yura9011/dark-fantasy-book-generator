@@ -1,0 +1,9 @@
+GENERATE a list of 5 unique and evocative ways to end a scene suitable for a dark fantasy novel titled '{book_title}'.
+
+Create a conclusive ending, The scene endings must be concise, create tension, and connect with the character's goals and fears.
+
+INCORPORATE the following themes from the book title: '{keywords_string}'.
+
+The scene endings must focus on creating a sense of foreboding, suspense, and impending doom.
+
+OUTPUT a unique conclusive ending, separated by newlines. No introductory or explanatory text. Follow the specified structure precisely

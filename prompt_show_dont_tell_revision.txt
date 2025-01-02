@@ -1,0 +1,7 @@
+REWRITE the following {is_transition} using the "show, don't tell" technique.  
+Focus on sensory details and actions to portray emotions and sensations. 
+DO NOT explicitly state emotions or feelings; instead, depict them through actions, body language, internal thoughts, or visceral descriptions of the surroundings.
+
+Original text:
+
+{sections_text}

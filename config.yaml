@@ -1,0 +1,76 @@
+api_key: GOOGLE_API_KEY
+api_max_wait_time: 300
+api_retries: 5
+book_title: Bones
+character_names:
+- Wraithgar
+- Xal'torin
+- Nyx
+- Malachi
+- Sabellian
+- Lysandra
+- Kaelen
+- Silas
+- Theron
+- Corvus
+- Rylan
+- Anya
+- Jax
+- Isadora
+- Ember
+- Cassian
+- Varyn
+- Lyra
+- Evelyn
+generate_character_profiles: true
+generate_world_elements: true
+model_max_output_tokens: 8192
+model_max_output_tokens_characters: 600
+model_name: learnlm-1.5-pro-experimental
+model_parameters:
+  character_generation:
+    max_output_tokens: 1024
+    temperature: 0.9
+    top_p: 0.95
+  creative:
+    max_output_tokens: 2048
+    temperature: 0.85
+    top_p: 0.95
+  review:
+    max_output_tokens: 2048
+    temperature: 0.7
+    top_p: 0.8
+model_temperature: 1.0
+model_top_p: 0.85
+num_chapters: 1
+num_subchapters: 2
+review_model_max_output_tokens: 4096
+review_model_name: gemini-1.5-flash-8b
+review_model_temperature: 0.5
+world_elements: '- The Umbra
+
+  - The Confectioners
+
+  - Rosso Gelato
+
+  - The Gilded Cage
+
+  - Crimson Juice
+
+  - The Marzipan Fortress
+
+  - The Blackened Spire
+
+  - The Shadowed Vale
+
+  - The Dark Forest
+
+  - The Gilded Cage
+
+  - Crimson Juice
+
+  - The Marzipan Fortress
+
+  - The Blackened Spire
+
+  - The Shadowed Vale'
