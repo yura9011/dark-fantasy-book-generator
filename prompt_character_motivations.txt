@@ -1,9 +1,7 @@
-GENERATE a list of 7 unique character motivations suitable for characters in a dark fantasy novel titled '{book_title}'.
-
+GENERATE unique character motivations suitable for characters in a dark fantasy novel titled '{book_title}'.
 The characters must be morally ambiguous, and their motives must be related to the central themes of the novel.
-
+Showing their doubts, fears and hopes more explicitly could generate a greater connection with the reader.
 INCORPORATE the following themes from the book title: '{keywords_string}'.
-
-The motivations MUST reflect a desire for power, vengeance, redemption, forbidden knowledge, self-preservation, justice, A Thirst for Transcendence , A Twisted Sense of Order, A Craving for Absolution, The Pursuit of a Forbidden Harmony, An Unyielding Search for a Lost Truth
-Don't use similar phrases or ideas repeatedly.
-OUTPUT the list of 5 motivations, separated by newlines. No introductory or explanatory text. Follow the specified structure precisely
+Don't use similar phrases or ideas repeatedly. 
+Language Could be explicit, sexual, violent or any strong kind if you feel is needed
+OUTPUT a list of 5 motivations, separated by newlines. No introductory or explanatory text. Follow the specified structure precisely

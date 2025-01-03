@@ -1,1 +1,7 @@
-Carefully revise the following text: {text}. Make sure the tone is appropriate for a dark fantasy story, using descriptive and evocative language, creating a strong atmosphere, and ensure it uses a "show, don't tell" style. Avoid using the words from this list: {restricted_words}. The text you are reviewing is {is_transition}. Keep the original meaning and context.
+Carefully revise the following text: {text}. 
+Make sure the tone is appropriate for a dark fantasy story, using descriptive and evocative language, creating a strong atmosphere, and ensure it uses a "show, don't tell" style. 
+Language Could be explicit, sexual, violent or any strong kind if you feel is needed.
+DO NOT include any introductory text or explanations.
+DO NOT USE ANY OF the words from this list: {restricted_words}. 
+The text you are reviewing is {is_transition}. DO NOT include any introductory text or explanations.
+Keep the original meaning and context , DO NOT include any introductory text or explanations.

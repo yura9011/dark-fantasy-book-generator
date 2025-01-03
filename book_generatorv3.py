@@ -287,7 +287,7 @@ def generate_character_essence(model, config, used_names, keywords_string, safet
     
     prompt_character_essence = f"""
         GENERATE a JSON dictionary representing character essences for a dark fantasy novel titled '{config['book_title']}'.
-        The dictionary MUST contain a list of 5 character essences.
+        The dictionary MUST contain a list of unpredictable character essences.
         Each character essence MUST have a unique 'name' and a 'description'.
         The dictionary MUST have the following structure:
         {{
@@ -303,7 +303,7 @@ def generate_character_essence(model, config, used_names, keywords_string, safet
           ]
         }}
 
-        The characters MUST have a dark and evocative tone and reflect the themes from the book title: '{keywords_string}'
+        The characters MUST have a intricate and complex tone, even paradoxical, making sure they are unique and not archetypical.
         DO NOT include any introductory or explanatory text. ONLY output the JSON dictionary.
     """
     

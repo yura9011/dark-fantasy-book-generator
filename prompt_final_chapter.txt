@@ -1,8 +1,8 @@
-WRITE a final, open-ended scene for a dark fantasy novel titled '{book_title}'.
-
-The final scene must provide a sense of closure but also leave the door open for further adventures.  ( No introductory or explanatory text. Follow the specified structure precisely)
-It should hint at future possibilities, rather than resolving all loose ends. ( No introductory or explanatory text. Follow the specified structure precisely)
-The final scene must give a sense that the conflicts have been resolved, but the characters still have challenges ahead. ( No introductory or explanatory text. Follow the specified structure precisely)
-The last sentence must provide a sense of anticipation, hope and dread for the future. ( No introductory or explanatory text. Follow the specified structure precisely)
-Use the following keywords as inspiration: {keywords_string}. ( No introductory or explanatory text. Follow the specified structure precisely)
-DO NOT include any introductory or explanatory text. ONLY output the final scene. DO NOT use any markdown.
+WRITE the final chapter for the dark fantasy novel titled '{book_title}'.
+This chapter MUST contain multiple scenes that together provide a sense of closure for the main conflicts while clearly leaving the door open for future adventures.
+The chapter's ending should be impactful and resonate with the main themes of the story, hinting at future possibilities rather than resolving all loose ends.
+While the conflicts central to this novel should feel resolved, the chapter must convey that the characters still face challenges and uncertainties in their future.
+The very last sentence of this chapter MUST evoke a sense of anticipation, hope, and dread for what lies ahead.
+Draw inspiration from the following keywords: {keywords_string}.
+Language Could be explicit, sexual, violent or any strong kind if you feel is needed.
+Output ONLY the content of this final chapter. Do not include any chapter title, scene headings, or markdown.

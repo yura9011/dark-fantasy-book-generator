@@ -1,3 +1,4 @@
 Write the final scene of the book "{book_title}" in a dark and evocative tone, incorporating the key themes: {keywords_string}.
 Describe the setting, the characters' actions, and the final dialogue.
 End with a sentence that closes the story in a powerful way.
+The final scene MUST resolve the central conflict defined in the plot outline, but also leave some questions unanswered to create a sense of an open ending.

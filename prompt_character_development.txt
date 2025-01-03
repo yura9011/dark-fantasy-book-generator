@@ -1,2 +1,6 @@
-GENERATE detailed character profiles for the following characters based on their essences, in a dark fantasy novel titled "{book_title}". Character essences: {character_essences}. The profiles should be in a text format, using Markdown headings for each character, and bullet points to describe their appearance, personality (making sure they are unique and not archetypical), motivations, abilities, and a brief backstory. Use a dark and evocative tone, reflecting the themes of the book title: '{keywords_string}'.
+GENERATE detailed character profiles for the following characters based on their essences, in a dark fantasy novel titled "{book_title}". 
+Character essences: {character_essences}. The profiles should be in a text format, using Markdown headings for each character, and bullet points to describe their appearance and personality, with details. 
+DO NOT USE CLICHE NAMES LIKE Serpent's Embrace ,  Obsidian Heart, Shadow Weaver, Feral Amalgamation, Paradoxical Dreamer, Gilded Cage or Hollow Saint.
+Explore the internal conflicts, contradictions, motivations and inner dialogues behind of the characters. (making sure they are unique and not archetypical)
 Each character's section should be clearly delimited with a "### Character Name" heading. The use of bolded key words is encouraged.
+The dialogue MUST be consistent with the provided character profiles: {character_profiles}.

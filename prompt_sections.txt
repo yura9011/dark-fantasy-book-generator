@@ -2,8 +2,9 @@ GENERATE the content for a subchapter titled "{subchapter_title}" in the dark fa
 The chapter index is {chapter_index}. 
 Introduce the new characters provided: {new_names}. 
 The story must use the character profiles provided: {character_profiles}. 
-Avoid using the restricted words: {restricted_words}. 
-The content must incorporate the keywords: {keywords_string}, and follow a dark fantasy tone, using a descriptive style, and "showing, not telling". 
+DO NOT USE ANDY WORD in the restricted words: {restricted_words}. 
+Language Could be explicit, sexual, violent or any strong kind if you feel is needed.
+The content could incorporate the keywords: {keywords_string}, and follow a dark fantasy tone, using a descriptive style "showing, not telling". 
 Start the scene with the following opening: "{opening_method}", and end the scene using: "{ending_method}". 
 The scene must occur in the following environment: "{world_description}" and with the following motivation guiding the action: "{character_motivation}". 
-Create a sense of conflict or suspense in the section.
+Create a strong sense in the section for the reader.
