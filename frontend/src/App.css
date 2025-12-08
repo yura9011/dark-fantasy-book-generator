@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #1a1d24;
+  padding: 20px;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form label {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form input {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: #61dafb;
+  color: #282c34;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.book-display {
+  padding: 20px;
+  white-space: pre-wrap;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #1a1d24;
+  border-radius: 8px;
+}

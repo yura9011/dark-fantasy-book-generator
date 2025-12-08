@@ -1,8 +1,12 @@
 # ui_module.py
+import subprocess
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import yaml
 import os
+import threading
+import logging
+import time
 
 class ConfigUI(tk.Tk):
     """
@@ -13,6 +17,7 @@ class ConfigUI(tk.Tk):
         super().__init__()
         self.title("Book Generator Configuration")
         self.geometry("800x600")
+        self.resizable(False, False)
 
         # Intenta establecer un tema diferente
         try:
@@ -30,28 +35,64 @@ class ConfigUI(tk.Tk):
         for file in self.prompt_files:
             self.prompt_contents[file] = self._load_prompt(os.path.join(self.prompts_dir, file))
         
-        # --- Buttons at the bottom ---
-        buttons_frame = ttk.Frame(self)
-        buttons_frame.pack(pady=10, padx=10, fill='x')
-
-        ttk.Button(buttons_frame, text="Save Configuration", command=self._save_config).pack(side=tk.LEFT, padx=5)
-        ttk.Button(buttons_frame, text="Generate Book", command=self._run_script).pack(side=tk.RIGHT, padx=5)
+        # --- Mode Selection ---
+        mode_frame = ttk.LabelFrame(self, text="Select Mode")
+        mode_frame.pack(pady=10, padx=10, fill='x')
         
-        # Notebook for tabs
+        self.mode_var = tk.StringVar(value="Simple")
+        ttk.Radiobutton(mode_frame, text="Simple", variable=self.mode_var, value="Simple", command=self._update_ui_mode).pack(side=tk.LEFT, padx=10)
+        ttk.Radiobutton(mode_frame, text="Advanced", variable=self.mode_var, value="Advanced", command=self._update_ui_mode).pack(side=tk.LEFT, padx=10)
+        
+        # Notebook for tabs (Initially Hidden)
         self.notebook = ttk.Notebook(self)
-        self.notebook.pack(pady=10, padx=10, expand=True, fill='both')
+        self.notebook.pack(pady=10, padx=10, expand=True, fill='both', side="top")
+        self.notebook.pack_forget()  # Hide initially
 
         # --- Configuration Tab ---
         self.config_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.config_tab, text='Configuration')
         self._create_config_widgets(self.config_tab)
-
+        
         # --- Prompts Tab ---
         self.prompts_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.prompts_tab, text='Prompts')
         self._create_prompts_widgets(self.prompts_tab)
+        
+
+        # --- Progress Bar ---
+        self.progress_bar = ttk.Progressbar(self, orient=tk.HORIZONTAL, length=300, mode='indeterminate')
+        self.progress_bar.pack(pady=10, padx=10, fill='x', side="bottom")
+        self.progress_bar.pack_forget()  # Hide initially
+
+        # --- Output Console---
+        self.output_text = tk.Text(self, wrap="word", height=10)
+        self.output_text.pack(pady=10, padx=10, fill="x", side="bottom")
+        self.output_text.pack_forget()  # Hide initially
+
+        # --- Buttons at the bottom ---
+        buttons_frame = ttk.Frame(self)
+        buttons_frame.pack(pady=10, padx=10, fill='x', side="bottom")
+
+        ttk.Button(buttons_frame, text="Save Configuration", command=self._save_config).pack(side=tk.LEFT, padx=5)
+        self.generate_button = ttk.Button(buttons_frame, text="Generate Book", command=self._start_generation)
+        self.generate_button.pack(side=tk.RIGHT, padx=5)
 
         self._populate_from_config()
+        self._update_ui_mode() # Set the default selected mode and UI at start
+
+    def _update_ui_mode(self):
+       selected_mode = self.mode_var.get()
+       
+       if selected_mode == "Simple":
+            self.notebook.pack_forget()
+            self.progress_bar.pack(pady=10, padx=10, fill='x', side="bottom")
+            self.output_text.pack(pady=10, padx=10, fill="x", side="bottom")
+       elif selected_mode == "Advanced":
+          self.notebook.pack(pady=10, padx=10, expand=True, fill='both', side="top")
+          self.progress_bar.pack_forget()
+          self.output_text.pack_forget()
+       else:
+            logging.error("Invalid mode selection in UI.")
 
     def _load_config(self):
         """Loads configuration from config.yaml."""
@@ -96,14 +137,6 @@ class ConfigUI(tk.Tk):
         except Exception as e:
             messagebox.showerror("Error", f"Error saving prompt file: {e}")
 
-    def _create_widgets(self):
-        """Creates and arranges the UI elements."""
-        
-        # Notebook for tabs
-        
-
-        
-    
     def _create_config_widgets(self, parent_frame):
         """Creates widgets for the Configuration tab."""
         # --- General Settings ---
@@ -249,14 +282,113 @@ class ConfigUI(tk.Tk):
 
         self.config_data['character_names'] = list(self.char_list.get(0, tk.END))
         self.config_data['world_elements'] = self.world_text.get(1.0, tk.END).strip()
+    
+    def _show_error(self, message):
+        self.output_text.insert(tk.END, f"Error: {message}\n")
+        self.progress_bar.stop()
+    
+    def _update_progress(self, message):
+        self.output_text.insert(tk.END, f"{message}\n")
 
+    def _start_generation(self):
+        """Saves config and starts the main script execution in a thread."""
+        selected_mode = self.mode_var.get()
+        self._collect_config_from_ui()
+        self._save_config()
+
+        if selected_mode == "Simple":
+             self.progress_bar.start()
+             self.generate_button.config(state='disabled')
+             threading.Thread(target=self._run_script_simple).start()
+        elif selected_mode == "Advanced":
+             self.generate_button.config(state='disabled')
+             self._run_script()
+
+    def _run_script_simple(self):
+        """Runs the main script for Simple Mode in a thread."""
+        self._clear_output()  # Clear output area
+        self._update_progress("Starting book generation...")
+
+        # Collect values from Simple Mode UI
+        book_title = self.book_title_entry.get()
+        num_chapters = self.num_chapters_spin.get()
+        num_subchapters = self.num_subchapters_spin.get()
+
+        try:
+            # Construct the command to run the main script
+            script_name = "book_generatorv3.py"
+            command = [
+                "python",
+                script_name,
+                "--simple",
+                "--book_title", book_title,
+                "--num_chapters", num_chapters,
+                "--num_subchapters", num_subchapters
+            ]
+
+            # Use PIPE to capture output and error streams
+            process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            # Handle output and error streams in separate threads
+            threading.Thread(target=self._handle_stream, args=(process.stdout, False)).start()
+            threading.Thread(target=self._handle_stream, args=(process.stderr, True)).start()
+
+            # Wait for the process to complete
+            process.wait()
+
+            self._update_progress("Book generation complete.")
+        except Exception as e:
+            self._show_error(f"Error during book generation: {e}")
+        finally:
+            self.progress_bar.stop()
+            self.generate_button.config(state='normal')
+
+    def _handle_stream(self, stream, is_error_stream):
+        """Handles output or error stream from the subprocess."""
+        for line in iter(stream.readline, ''):
+            if is_error_stream:
+                self._show_error(line.strip())
+            else:
+                self._update_progress(line.strip())
+    
+    def _run_script(self):
+        """Runs the main script in a thread."""
+        # Implement here the code for "Advanced" mode
+        self._update_progress("Starting book generation...")
+        
+        self.progress_bar.start()
+        self.generate_button.config(state="disabled")
+        
+        def run_in_thread():
+            """Executes the main script and handle exceptions."""
+            try:
+              # Construct the command to run the main script
+                script_name = "book_generatorv3.py"  # Replace with your main script's name
+                command = f"python {script_name}"
+                
+                os.system(command)
+                self._update_progress("Book generation complete.")
+            except Exception as e:
+                self._show_error(f"Error during book generation: {e}")
+            finally:
+                self.progress_bar.stop()
+                self.generate_button.config(state='normal')
+
+        threading.Thread(target=run_in_thread).start()
+
+    def _clear_output(self):
+        """Clears the text from the output area."""
+        self.output_text.delete(1.0, tk.END)
+    
     def _load_selected_prompt(self, event):
-        """Loads the selected prompt file into the editor, using the stored content."""
-        selected_indices = self.prompts_listbox.curselection()
-        if selected_indices:
-            filename = self.prompts_listbox.get(selected_indices[0])
-            self.prompt_editor.delete(1.0, tk.END)
-            self.prompt_editor.insert(tk.END, self.prompt_contents[filename])
+      """Loads the selected prompt file into the editor."""
+      widget = event.widget
+      selection = widget.curselection()
+      if selection:  # Check if selection is not empty
+        index = selection[0]
+        filename = widget.get(index)
+        self.prompt_editor.delete(1.0, tk.END)
+        self.prompt_editor.insert(tk.END, self.prompt_contents[filename])
 
     def _save_current_prompt(self):
         """Saves the content of the prompt editor to the currently selected file."""
@@ -269,20 +401,6 @@ class ConfigUI(tk.Tk):
             self._save_prompt(filepath, content) # save to file only here.
         else:
             messagebox.showwarning("Warning", "No prompt file selected.")
-
-    def _run_script(self):
-        """Saves the configuration (but not prompts) and runs the main script."""
-        self._collect_config_from_ui()
-        self._save_config()
-        # Construct the command to run the main script
-        script_name = "book_generatorv3.py"  # Replace with your main script's name
-        command = f"python {script_name}"
-        
-        try:
-            os.system(command)
-            messagebox.showinfo("Info", f"Running script: {script_name}")
-        except Exception as e:
-            messagebox.showerror("Error", f"Error running script: {e}")
 
 if __name__ == "__main__":
     app = ConfigUI()

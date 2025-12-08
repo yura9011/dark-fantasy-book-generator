@@ -1,7 +1,7 @@
 api_key: GOOGLE_API_KEY
 api_max_wait_time: 300
 api_retries: 5
-book_title: Ouroboros Downpath
+book_title: Underworld
 character_names:
 - Wraithgar
 - Xal'torin
@@ -24,12 +24,12 @@ character_names:
 - Evelyn
 generate_character_profiles: true
 generate_world_elements: true
-model_max_output_tokens: 8192
-model_max_output_tokens_characters: 600
-model_name: learnlm-1.5-pro-experimental
+model_max_output_tokens: 65536
+model_max_output_tokens_characters: 65536
+model_name: gemini-2.0-flash-exp
 model_parameters:
   character_generation:
-    max_output_tokens: 1024
+    max_output_tokens: 2048
     temperature: 0.9
     top_p: 0.95
   creative:
@@ -40,12 +40,12 @@ model_parameters:
     max_output_tokens: 2048
     temperature: 0.7
     top_p: 0.8
-model_temperature: 1.5
+model_temperature: 1.11
 model_top_p: 0.85
-num_chapters: 5
+num_chapters: 1
 num_subchapters: 3
-review_model_max_output_tokens: 4096
-review_model_name: gemini-1.5-flash-8b
+review_model_max_output_tokens: 65536
+review_model_name: gemini-2.0-flash-thinking-exp-01-21
 review_model_temperature: 0.5
 world_elements: '- The Umbra
 
