@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from typing import Optional
 import logging
 from backend.agents.orchestrator import OrchestratorAgent
 from dotenv import load_dotenv
@@ -25,12 +26,12 @@ app.add_middleware(
 class BookGenerationRequest(BaseModel):
     book_title: str
     num_chapters: int
-    num_subchapters: int # Kept for compatibility
+    num_subchapters: int  # Kept for compatibility
     plot: str
     keywords: list[str]
-    existing_state: dict = None # Optional state to resume from
-    stop_after: str = None # Optional: "world_building", "character_creation"
-    inquiry_responses: dict = None # Optional: Answers to the Deep Inquiry
+    existing_state: Optional[dict] = None  # Optional state to resume from
+    stop_after: Optional[str] = None  # Optional: "world_building", "character_creation"
+    inquiry_responses: Optional[dict] = None  # Optional: Answers to the Deep Inquiry
 
 @app.post("/generate")
 def generate_book(request: BookGenerationRequest):
@@ -68,3 +69,49 @@ def generate_book_task(book_title: str, num_chapters: int, themes: list[str], ex
     except Exception as e:
         logging.error(f"Generation failed: {e}")
         return {"error": str(e)}
+
+
+# === Lore Generation ===
+
+from backend.agents.lore_orchestrator import LoreOrchestratorAgent
+
+class LoreGenerationRequest(BaseModel):
+    project_name: str
+    num_eras: int = 4
+    num_factions: int = 5
+    num_characters: int = 6
+    num_conflicts: int = 4
+    num_chapters_per_route: int = 5
+    existing_state: Optional[dict] = None
+    stop_after: Optional[str] = None  # "eras", "factions", "characters", "conflicts", "routes"
+
+
+@app.post("/generate-lore")
+def generate_lore(request: LoreGenerationRequest):
+    """Generate game lore with branching narratives."""
+    logging.basicConfig(level=logging.INFO)
+    
+    try:
+        orchestrator = LoreOrchestratorAgent()
+        
+        result = orchestrator.start_generation(
+            project_name=request.project_name,
+            num_eras=request.num_eras,
+            num_factions=request.num_factions,
+            num_characters=request.num_characters,
+            num_conflicts=request.num_conflicts,
+            num_chapters_per_route=request.num_chapters_per_route,
+            stop_after=request.stop_after,
+            existing_state=request.existing_state
+        )
+        
+        # Generate markdown export
+        if result.get("status") == "COMPLETE":
+            result["markdown"] = orchestrator.export_to_markdown()
+        
+        return result
+        
+    except Exception as e:
+        logging.error(f"Lore generation failed: {e}")
+        return {"error": str(e), "status": "ERROR"}
+

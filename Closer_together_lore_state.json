@@ -1,0 +1,51 @@
+{
+  "project_name": "Closer together",
+  "tone": "dark_fantasy_introspective",
+  "variety_seeds": {
+    "name_cultures": [
+      "celtic",
+      "persian"
+    ],
+    "emotion_seed": "quiet fury",
+    "aesthetic_seed": "iron and incense",
+    "conflict_seed": "peace through surrender",
+    "game_reference": "ogre_battle",
+    "event_inspirations": [
+      "The Pretender's Era",
+      "The Endless Campaign",
+      "The Throne of Thorns"
+    ]
+  },
+  "eras": [],
+  "cosmology": {},
+  "factions": [],
+  "territories": [],
+  "characters": [],
+  "relationships": [],
+  "conflicts": [],
+  "dilemmas": [],
+  "routes": {
+    "light": {
+      "name": "",
+      "chapters": [],
+      "ending": "",
+      "unlocked": false
+    },
+    "shadow": {
+      "name": "",
+      "chapters": [],
+      "ending": "",
+      "unlocked": false
+    },
+    "neutral": {
+      "name": "",
+      "chapters": [],
+      "ending": "",
+      "unlocked": false
+    }
+  },
+  "decision_points": [],
+  "hidden_routes": [],
+  "current_phase": "complete",
+  "completed_phases": []
+}

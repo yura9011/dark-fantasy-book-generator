@@ -1,0 +1,165 @@
+{
+    "tactics_ogre": {
+        "full_name": "Tactics Ogre: Let Us Cling Together",
+        "themes": [
+            "ethnic cleansing and genocide",
+            "the burden of the 'chosen one'",
+            "loyalty versus morality",
+            "no pure evil - everyone believes they're right",
+            "sins of the father",
+            "revolutionary becoming the oppressor"
+        ],
+        "narrative_mechanics": [
+            "route splits based on moral choices",
+            "permadeath gives weight to every battle",
+            "characters leave if you betray their values",
+            "multiple endings based on cumulative choices",
+            "hidden characters with tragic backstories"
+        ],
+        "emotional_beats": [
+            "forced to watch atrocities you cannot prevent",
+            "choosing between two evils",
+            "friends becoming enemies over ideology",
+            "redemption that comes too late"
+        ]
+    },
+    "ff6": {
+        "full_name": "Final Fantasy VI",
+        "themes": [
+            "ensemble cast with equal importance",
+            "personal trauma and recovery",
+            "hope in the face of despair",
+            "technology versus nature",
+            "identity and self-worth",
+            "found family"
+        ],
+        "narrative_mechanics": [
+            "world state transformation (world of balance to world of ruin)",
+            "optional character recruitment",
+            "split party arcs",
+            "villain wins at midpoint",
+            "multiple protagonists with interwoven stories"
+        ],
+        "emotional_beats": [
+            "sacrifice that means something",
+            "confronting past abuse",
+            "finding reasons to live after loss",
+            "small moments of beauty in devastation"
+        ]
+    },
+    "vagrant_story": {
+        "full_name": "Vagrant Story",
+        "themes": [
+            "unreliable memory and truth",
+            "cult manipulation and fanaticism",
+            "inherited sin and bloodline curses",
+            "the weight of past violence",
+            "identity dissolution"
+        ],
+        "narrative_mechanics": [
+            "single protagonist deep dive",
+            "dungeon as psychological space",
+            "fragmented storytelling",
+            "ambiguous endings",
+            "past revealed through exploration"
+        ],
+        "emotional_beats": [
+            "questioning everything you thought you knew",
+            "ghosts of the past manifesting literally",
+            "the city itself as a character",
+            "isolation and introspection"
+        ]
+    },
+    "ogre_battle": {
+        "full_name": "Ogre Battle: March of the Black Queen",
+        "themes": [
+            "liberation and revolution",
+            "reputation and public perception",
+            "tarot as fate system",
+            "alignment and moral spectrum",
+            "army building and loyalty"
+        ],
+        "narrative_mechanics": [
+            "reputation affects endings",
+            "unit morale and loyalty systems",
+            "multiple endings based on karma",
+            "hidden units with recruitment conditions",
+            "empire building mechanics"
+        ],
+        "emotional_beats": [
+            "the cost of victory",
+            "becoming what you fought against",
+            "loyalty tested by hardship",
+            "the weight of command"
+        ]
+    },
+    "ffv": {
+        "full_name": "Final Fantasy V",
+        "themes": [
+            "adventure and camaraderie",
+            "legacy and inheritance",
+            "sacrifice of the elders",
+            "dual worlds and hidden connections",
+            "job mastery as identity"
+        ],
+        "narrative_mechanics": [
+            "job system for character customization",
+            "world merging events",
+            "mentor figure sacrifice",
+            "hidden superboss challenges",
+            "comedic relief balancing tragedy"
+        ],
+        "emotional_beats": [
+            "loss of a mentor figure",
+            "discovering hidden parentage",
+            "lightness masking deeper pain",
+            "friendship forged through crisis"
+        ]
+    },
+    "fire_emblem_genealogy": {
+        "full_name": "Fire Emblem: Genealogy of the Holy War",
+        "themes": [
+            "generational saga (parents to children)",
+            "holy bloodlines and inheritance",
+            "manipulation by unseen forces",
+            "tragedy of the first generation",
+            "children surpassing parents"
+        ],
+        "narrative_mechanics": [
+            "romance affecting child units",
+            "time skip between generations",
+            "massive maps with multiple objectives",
+            "holy weapons tied to bloodlines",
+            "death is permanent"
+        ],
+        "emotional_beats": [
+            "watching beloved characters fall",
+            "children inheriting parents' unfinished battles",
+            "love stories cut short by war",
+            "the enemy was manipulated all along"
+        ]
+    },
+    "suikoden_2": {
+        "full_name": "Suikoden II",
+        "themes": [
+            "childhood friends on opposite sides",
+            "nation building from nothing",
+            "the madness of war",
+            "collecting lost souls and giving them purpose",
+            "leadership and responsibility"
+        ],
+        "narrative_mechanics": [
+            "108 recruitable characters",
+            "base building and upgrades",
+            "army battles alongside personal combat",
+            "multiple endings based on recruitment",
+            "cooking minigames for bonding"
+        ],
+        "emotional_beats": [
+            "best friend as final boss",
+            "building a home for the displaced",
+            "small kindnesses in wartime",
+            "the true enemy hiding behind the scenes"
+        ]
+    }
+}

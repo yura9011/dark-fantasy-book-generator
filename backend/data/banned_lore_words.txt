@@ -1,0 +1,87 @@
+# Banned Lore Words
+# These overused LLM-generated names and terms should be avoided to ensure variety.
+# The Variety Injector will pass this list to agents for exclusion.
+
+## Character Names (Male)
+Kael
+Thorne
+Ash
+Raven
+Shadow
+Dark
+Storm
+Wolf
+Blade
+Drake
+Grim
+Wraith
+Talon
+Vex
+Zane
+
+## Character Names (Female)
+Lyra
+Luna
+Raven
+Ember
+Aurora
+Nova
+Selene
+Nyx
+Aria
+Seraphina
+Morgana
+Vesper
+
+## Events and Cataclysms
+The Sundering
+The Cataclysm
+The Great War
+The Purge
+The Awakening
+The Fall
+The Breaking
+The Shattering
+The Convergence
+The Reckoning
+The Ascension
+The Darkness
+
+## Faction Prefixes
+Order of the...
+Brotherhood of...
+Council of...
+Guild of...
+Covenant of...
+Circle of...
+Cult of the...
+Legion of...
+
+## Generic Place Names
+Shadowvale
+Darkwood
+Stormhold
+Thornhaven
+Ravenspire
+Nightfall
+Blackrock
+Moonhaven
+Crystalpeak
+Ironforge
+
+## Overused Titles
+The Chosen One
+The Dark Lord
+The Shadow King
+The Last Hope
+The Fallen
+The Betrayer
+The Savior
+
+## Generic Magic Systems
+Mana
+The Weave
+The Source
+The Flow
+Arcane Energy
+The Void

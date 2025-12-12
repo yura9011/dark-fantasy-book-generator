@@ -34,3 +34,39 @@ export const generateBook = async (data) => {
         throw error;
     }
 };
+
+export const generateLore = async (data) => {
+    try {
+        const response = await fetch(`${API_URL}/generate-lore`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                project_name: String(data.project_name || "Untitled Lore"),
+                num_eras: parseInt(data.num_eras || 4),
+                num_factions: parseInt(data.num_factions || 5),
+                num_characters: parseInt(data.num_characters || 6),
+                num_conflicts: parseInt(data.num_conflicts || 4),
+                num_chapters_per_route: parseInt(data.num_chapters_per_route || 5),
+                existing_state: data.existingState || null,
+                stop_after: data.stopAfter || null
+            }),
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Lore API Error:', JSON.stringify(errorData, null, 2));
+            const errorMessage = errorData.detail
+                ? JSON.stringify(errorData.detail)
+                : (errorData.error || 'Failed to generate lore');
+            throw new Error(errorMessage);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Lore API Error:', error);
+        throw error;
+    }
+};
+

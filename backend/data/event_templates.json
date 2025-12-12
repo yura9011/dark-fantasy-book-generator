@@ -1,0 +1,122 @@
+[
+    {
+        "id": "fall_of_constantinople",
+        "name": "The Last Siege",
+        "description": "A mighty city, unconquered for a thousand years, finally falls to overwhelming force after a months-long siege",
+        "themes": [
+            "end of an era",
+            "hubris",
+            "desperate last stand",
+            "betrayal from within"
+        ],
+        "emotional_core": "The weight of inevitability crushing hope"
+    },
+    {
+        "id": "warring_states",
+        "name": "The Fractured Realm",
+        "description": "A once-unified empire splinters into seven warring kingdoms, each claiming legitimacy",
+        "themes": [
+            "civil war",
+            "shifting alliances",
+            "pragmatism over honor",
+            "tactical genius"
+        ],
+        "emotional_core": "Loyalty tested against survival"
+    },
+    {
+        "id": "albigensian_crusade",
+        "name": "The Purification",
+        "description": "A dominant faith launches a campaign to eradicate a 'heretical' sect, slaughtering believers and innocents alike",
+        "themes": [
+            "religious persecution",
+            "moral absolutism",
+            "refugees",
+            "hidden faith"
+        ],
+        "emotional_core": "Faith weaponized against the faithful"
+    },
+    {
+        "id": "bronze_age_collapse",
+        "name": "The Silent Ending",
+        "description": "Multiple advanced kingdoms collapse within a generation from unclear causes - drought, invasion, internal rot",
+        "themes": [
+            "mysterious decline",
+            "lost knowledge",
+            "migration",
+            "dark age"
+        ],
+        "emotional_core": "When no one remembers why everything fell"
+    },
+    {
+        "id": "taiping_rebellion",
+        "name": "The Prophet's War",
+        "description": "A visionary claims divine mandate and raises an army of millions against the established order",
+        "themes": [
+            "messianic figure",
+            "peasant uprising",
+            "utopian ideals corrupted",
+            "massive casualties"
+        ],
+        "emotional_core": "Heaven's promise drowning in blood"
+    },
+    {
+        "id": "wars_of_roses",
+        "name": "The Throne of Thorns",
+        "description": "Two branches of the same royal bloodline war for decades over succession",
+        "themes": [
+            "family betrayal",
+            "kingmaking",
+            "child rulers",
+            "noble houses destroyed"
+        ],
+        "emotional_core": "Blood cannot wash away blood"
+    },
+    {
+        "id": "sicilian_vespers",
+        "name": "The Night of Bells",
+        "description": "A spontaneous uprising massacres an occupying force in a single night across an entire island",
+        "themes": [
+            "occupation",
+            "sudden violence",
+            "revenge",
+            "foreign rule"
+        ],
+        "emotional_core": "Rage long suppressed erupting without warning"
+    },
+    {
+        "id": "time_of_troubles",
+        "name": "The Pretender's Era",
+        "description": "False claimants to the throne emerge repeatedly, each gathering followers, causing chaos",
+        "themes": [
+            "legitimacy crisis",
+            "impostors",
+            "foreign intervention",
+            "social collapse"
+        ],
+        "emotional_core": "When no one knows who to believe or follow"
+    },
+    {
+        "id": "an_lushan_rebellion",
+        "name": "The General's Betrayal",
+        "description": "A trusted military commander turns his armies against the empire he once served",
+        "themes": [
+            "military coup",
+            "trusted advisor as enemy",
+            "refugees",
+            "cultural destruction"
+        ],
+        "emotional_core": "The protector becomes the destroyer"
+    },
+    {
+        "id": "hundred_years_war",
+        "name": "The Endless Campaign",
+        "description": "A dynastic conflict stretches across generations, outliving those who started it",
+        "themes": [
+            "generational trauma",
+            "occupation",
+            "peasant suffering",
+            "unlikely heroes"
+        ],
+        "emotional_core": "Children inheriting their fathers' hatreds"
+    }
+]

@@ -1,0 +1,25 @@
+{
+  "male": [
+    "Aleksei", "Bogdan", "Czernobog", "Dazbog", "Fedor", "Goran", "Haralamb", "Ivan", 
+    "Jaroslav", "Kazimir", "Lazar", "Miroslav", "Nemanja", "Oleg", "Perun", "Radovan",
+    "Svarog", "Tihomir", "Ulrich", "Velimir", "Wenceslas", "Yaroslav", "Zoran", "Borislav",
+    "Dragomir", "Evgeni", "Fyodor", "Grigor", "Hrvoje", "Iskren", "Jaromir", "Kozelj",
+    "Ljubomir", "Milorad", "Nikola", "Ozren", "Premysl", "Ratibor", "Stanislav", "Tvrtko"
+  ],
+  "female": [
+    "Agafia", "Bozena", "Czeslawa", "Danica", "Elena", "Fyokla", "Gordana", "Hela",
+    "Irina", "Jadranka", "Kalina", "Lada", "Marzanna", "Nadia", "Olga", "Pelagija",
+    "Radmila", "Svetlana", "Tatjana", "Ulyana", "Vesna", "Wanda", "Yekaterina", "Zora",
+    "Blaga", "Cvijeta", "Drahomira", "Evdokija", "Floriana", "Grozda", "Hedvika", "Iskra"
+  ],
+  "surnames": [
+    "Volkov", "Korovin", "Blagojevic", "Chernyshev", "Drakulic", "Fedorova", "Gribov",
+    "Horovic", "Ivanenko", "Jovanovic", "Kovalenko", "Lazarevic", "Morozov", "Nemeth",
+    "Ostrowski", "Petrov", "Radovic", "Sokolov", "Tsvetkov", "Uvarov", "Vasiliev", "Wrobel"
+  ],
+  "places": [
+    "Bialozar", "Czarngrad", "Draznik", "Gorny Dvor", "Hranice", "Kamenny Most",
+    "Ledove Pole", "Mrak Hora", "Nocni Reka", "Ostrova", "Pazubia", "Rudna Skala",
+    "Stary Les", "Temny Hrad", "Uta Jezero", "Vrana Dolina", "Zlata Vez", "Bjelina"
+  ]
+}
